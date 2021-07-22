@@ -1,3 +1,4 @@
 wenv
 settings.json
-/
+.vscode
+__pycache__*
