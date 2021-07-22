@@ -20,4 +20,4 @@ def get_report(city: str, state: Optional[str], country: str, units: str) -> dic
 
     data = resp.json()
     print(data)
-    return data
+    return data['main']
