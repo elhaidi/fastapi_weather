@@ -22,13 +22,13 @@ def configure():
 
 def configure_api_key():
     # open the settings.json check for error
-    file = Path('setings.json').absolute()
+    file = Path('settings.json').absolute()
     # check if the file exist
     if not file.exists():
         print(
             f"WARNING: {file} file not found, you cannot continue, please see settings_template.json")
         raise Exception(
-            "settings.json file not found, you cannot continue, please see settings_template.json")
+            "settings.json file not found, you cannot continue, please see settings.json")
     with open(file) as s:
         settings = json.load(s)
         weather_service.api_key = settings.get('api_key')
